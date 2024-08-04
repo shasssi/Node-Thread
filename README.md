@@ -3,7 +3,7 @@
 ![alt text](<Single Process.jpeg>)
 | Method |  Worker Thread  | Clusters |
 |:-----|:--------:|------:|
-| Granularity   | `Worker threads operate at thread level, providing a way to run JavaScript code in parallel within a single process.` | `Clusters operate at process level, allowing you to create multiple Node.js processes (workers) to handle incoming network requests.` |
+| Granularity   | Worker threads operate at thread level, providing a way to run JavaScript code in parallel within a single process.` | `Clusters operate at process level, allowing you to create multiple Node.js processes (workers) to handle incoming network requests. |
 | Communication   |  `Communication between worker threads is typically achieved through message passing using the postMessage API.`  |   `Communication between the master process and worker processes is achieved using IPC mechanisms.` |
 | I/O Operations   | `Worker threads are not built for I/O-intensive operations, as Node.js’s built-in asynchronous I/O mechanisms are often more efficient.` |    `Clusters are built for handle I/O-intensive operations efficiently. Each worker in a cluster can handle incoming requests independently.` |
 | Memory Sharing   | `Worker threads can share memory using ArrayBuffer or SharedArrayBuffer instances, which allows more direct communication and shared data.` |    `Clusters operate in separate processes so memory is isolated between them. Communication between clusters is often achieved through message passing.` |
