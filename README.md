@@ -7,4 +7,4 @@
 | I/O Operations | Worker threads are not built for I/O-intensive operations, as Node.js’s built-in asynchronous I/O mechanisms are often more efficient. | Clusters are built for handle I/O-intensive operations efficiently. Each worker in a cluster can handle incoming requests independently. |
 | Memory Sharing | Worker threads can share memory using ArrayBuffer or SharedArrayBuffer instances, which allows more direct communication and shared data. | Clusters operate in separate processes so memory is isolated between them. Communication between clusters is often achieved through message passing. |
 | Use Case | Worker threads are good for CPU-intensive tasks where parallel processing can significantly improve performance. | Clusters are good for improving the scalability of networked applications by distributing incoming requests among multiple processes. |
-![alt text](<Single Process-1.jpeg>)
+![alt text](<Single Process.jpeg>)
